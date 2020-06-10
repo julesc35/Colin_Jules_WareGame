@@ -48,15 +48,15 @@ var eau;
 
 // boutons // 
 
-var BoutComJouer;
-var BoutJouer;
-var BoutRetour;
+var Bouton_ComJouer;
+var Bouton_Jouer;
+var Bouton_Retour;
 
-var BoutJeu1;
-var BoutJeu2;
-var BoutJeu3;
+var Bouton_Jeu1;
+var Bouton_Jeu2;
+var Bouton_Jeu3;
 
-var BoutBonus;
+var Bouton_Bonus;
 
 // text //
 
@@ -84,10 +84,17 @@ class Variables extends Phaser.Scene {
         this.load.image('Jeu1', 'Assets/Fond/Fond_Jeu1.png');
         this.load.image('Jeu2', 'Assets/Fond/Fond_Jeu2.png');
         this.load.image('Jeu3', 'Assets/Fond/Fond_Jeu3.png');
+        this.load.image('FondComJouer', 'Assets/Fond/CommentJouer.png');
 
     // boutons //
 
-
+        this.load.image('BoutJouer', 'Assets/Interface/Bouton_Jouer.png');
+        this.load.image('BoutComJouer', 'Assets/Interface/Bouton_ComJouer.png');
+        this.load.image('BoutRetour', 'Assets/Interface/Bouton_Retour.png');
+        this.load.image('BoutJeu1', 'Assets/Interface/Bouton_Jeu1.png');
+        this.load.image('BoutJeu2', 'Assets/Interface/Bouton_Jeu2.png');
+        this.load.image('BoutJeu3', 'Assets/Interface/Bouton_Jeu3.png');
+        this.load.image('BoutBonus', 'Assets/_Bonus/Bouton_Bonus.png');
 
     // elements //
 
@@ -97,7 +104,10 @@ class Variables extends Phaser.Scene {
 
 
 
-    // 
+    // ennemis / Obstacles //
+
+        this.load.image('BatEnnem', 'Assets/Personnages/bateauEnnemis.png');
+        this.load.image('Ennemi', 'Assets/Personnages/ennemis.png');
 
 	}
 
