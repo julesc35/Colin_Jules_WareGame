@@ -9,7 +9,7 @@ var config = {
         }
     },
     scene: [
-    Assets,
+    Variables,
     Audio,
     Intro,
     Menu,
