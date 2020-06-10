@@ -1,17 +1,16 @@
 var config = {
-  width: 800,
-  height: 600,
+  width: 1920,
+  height: 1080,
   physics: {
         default: 'arcade',
         arcade: {
             gravity: { y: 0},
-            debug: false
+            debug: true
         }
     },
     scene: [
     Variables,
     Audio,
-    Intro,
     Menu,
     Jeu1,
     Jeu2,
