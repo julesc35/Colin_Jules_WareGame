@@ -98,16 +98,24 @@ class Variables extends Phaser.Scene {
 
     // elements //
 
-
-
-    // collectibles //
-
-
+        this.load.image('Biere', 'Assets/Elements/Biere.png');
+        this.load.image('Rhum', 'Assets/Elements/Rhum.png');
+        this.load.image('Eau', 'Assets/Elements/Eau.png');
+        this.load.image('Vie', 'Assets/Elements/Vie.png');
 
     // ennemis / Obstacles //
 
         this.load.image('BatEnnem', 'Assets/Personnages/bateauEnnemis.png');
         this.load.image('Ennemi', 'Assets/Personnages/ennemis.png');
+        this.load.image('Obstacle', 'Assets/Elements_Decors/Obstacle.png');
+        this.load.image('Ennemile', 'Assets/Elements_Decors/Ennemile.png');
+        this.load.image('Ennemile2', 'Assets/Elements_Decors/Ennemile2.png');
+        this.load.image('EnnemiRoche', 'Assets/Elements_Decors/EnnemiRoche.png');
+
+    // Joueur // 
+
+        this.load.image('Pirate_Face', 'Assets/Personnages/Pirate_face.png');
+        this.load.image('Bateau_joueur', 'Assets/Personnages/bateauJoueur.png');
 
 	}
 
