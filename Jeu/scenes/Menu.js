@@ -5,11 +5,15 @@ class Menu extends Phaser.Scene {
 
 	init(){}
 
-	preload(){
+	preload(){}
 
-}
- create(){}
+        create(){
 
- update(){
+
+        }
+
+        update(){
+
+
  }
 }
