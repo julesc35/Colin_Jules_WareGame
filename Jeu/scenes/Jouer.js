@@ -1,6 +1,6 @@
-class Menu extends Phaser.Scene {
+class Jouer extends Phaser.Scene {
 	constructor(){
-		super('Menu')
+		super('Jouer')
 	}
 
 	init(){}

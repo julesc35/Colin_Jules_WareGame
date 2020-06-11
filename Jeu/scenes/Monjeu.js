@@ -12,6 +12,8 @@ var config = {
     Variables,
     Audio,
     Menu,
+    ComJouer,
+    Jouer,
     Jeu1,
     Jeu2,
     Jeu3]
