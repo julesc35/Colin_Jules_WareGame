@@ -85,6 +85,7 @@ class Variables extends Phaser.Scene {
         this.load.image('Jeu2', 'Assets/Fond/Fond_Jeu2.png');
         this.load.image('Jeu3', 'Assets/Fond/Fond_Jeu3.png');
         this.load.image('FondComJouer', 'Assets/Fond/CommentJouer.png');
+        this.load.image('FondBonus', 'Assets/_Bonus/Bonus.png');
 
     // boutons //
 
@@ -115,7 +116,17 @@ class Variables extends Phaser.Scene {
     // Joueur // 
 
         this.load.image('Pirate_Face', 'Assets/Personnages/Pirate_face.png');
+        this.load.sprite('Pirate_Droit', 'Assets/Personnages/Pirate_Course_Droit_Sprt.png');
+        this.load.sprite('Pirate_Gauche', 'Assets/Personnages/Pirate_Course_Gauche_Sprt.png');
+        this.load.sprite('Pirate_Fuite', 'Assets/Personnages/Pirate_Course_Fuite_Sprt.png');
         this.load.image('Bateau_joueur', 'Assets/Personnages/bateauJoueur.png');
+
+    // chargements // 
+
+
+        this.load.image('IntJeu1', 'Assets/Interface/Bouton_Jeu3.png');
+        this.load.image('IntJeu2', 'Assets/Interface/Bouton_Jeu3.png');
+        this.load.image('IntJeu3', 'Assets/Interface/Bouton_Jeu3.png');
 
 	}
 
