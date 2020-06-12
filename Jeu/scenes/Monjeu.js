@@ -11,12 +11,13 @@ var config = {
     scene: [
     Variables,
     Audio,
-    Menu,
-    ComJouer,
-    Jouer,
-    Jeu1,
-    Jeu2,
-    Jeu3]
+    Menu//,
+    //ComJouer,
+    //Jouer,
+    //Jeu1,
+    //Jeu2,
+    //Jeu3
+    ]
   }
 
 var game = new Phaser.Game(config);
