@@ -5,7 +5,9 @@ class ComJouer extends Phaser.Scene {
 
 	init(){}
 
-	preload(){
+	preload(){}
+
+ create(){
 
 		// fond // 
 
@@ -13,11 +15,8 @@ class ComJouer extends Phaser.Scene {
 
 		// boutons //
 
-
         this.add.image(400, 300, 'BoutRetour').setScale(0.30);
-
-}
- create(){}
+ }
 
  update(){
  }
