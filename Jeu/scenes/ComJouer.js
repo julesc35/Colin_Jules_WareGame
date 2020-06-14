@@ -19,5 +19,8 @@ class ComJouer extends Phaser.Scene {
  }
 
  update(){
+
+ 		//Appuyer sur le bouton retour//
+
  }
 }
