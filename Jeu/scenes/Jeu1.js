@@ -34,11 +34,29 @@ class Jeu1 extends Phaser.Scene {
         	frameRate: 5,
         	repeat: -1
         });
-	}
+
 
 	// creation des items // 
 
+    biere = this.physics.add.group({
+        key: 'biere',
+        repeat: Phaser.Math.Between(1,5),
+        setXY: position.X, position.Y
+    });
 
+    rhum = this.physics.add.group({
+        key: 'rhum',
+        repeat: Phaser.Math.Between(0,3),
+        setXY: position.X, position.Y
+    });
+
+    eau = this.physics.add.group({
+        key: 'eau',
+        repeat: Phaser.Math.Between(2,6),
+        setXY: position.X, position.Y
+    });
+
+}
 	update(){
 
 		// configuration des touches //

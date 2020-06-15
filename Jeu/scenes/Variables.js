@@ -21,6 +21,10 @@ var jeu1 = 0;
 var jeu2 = 0;
 var jeu3 = 0;
 
+var X = Phaser.Math.Between(0,1920);
+var Y = setPositionY(0);
+
+
 
 // musiques //
 

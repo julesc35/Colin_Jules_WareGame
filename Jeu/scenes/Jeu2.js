@@ -34,10 +34,36 @@ class Jeu2 extends Phaser.Scene {
         	repeat: -1
         });
 
+        // creation des enemis //
+
+
+    BateauEnm = this.physics.add.group({
+        key: 'BateauEnm',
+        repeat: Phaser.Math.Between(1,6),
+        setXY: position.X, position.Y
+    });
+
+    ile = this.physics.add.group({
+        key: 'ile',
+        repeat: Phaser.Math.Between(0,4),
+        setXY: position.X, position.Y
+    });
+
+    ile2 = this.physics.add.group({
+        key: 'ile2',
+        repeat: Phaser.Math.Between(0,2),
+        setXY: position.X, position.Y
+    });
+    rochile = this.physics.add.group({
+        key: 'rochile',
+        repeat: Phaser.Math.Between(1,4),
+        setXY: position.X, position.Y
+    });
+
 }
 
 	update(){
-		
+
 		// configuration des touches //
 		if (cursors.left.isDown && cursors.right.isUp){
 			player.anims.play('left', true);

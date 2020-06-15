@@ -42,7 +42,7 @@ class Jeu3 extends Phaser.Scene {
 		if (cursors.left.isDown && cursors.right.isUp){
 			player.anims.play('left', true);
 			player.setFlipX(false);
-			player.setVelocityX(-120);
+			player.setVelocityX(-95);
 			player.setVelocityY(0);
 		}
 		else if (cursors.right.isUp && cursors.left.isUp){
