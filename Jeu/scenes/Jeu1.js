@@ -56,6 +56,10 @@ class Jeu1 extends Phaser.Scene {
         setXY: position.X, position.Y
     });
 
+    // collisions //
+
+    this.physics.add.collider();
+
 }
 	update(){
 
@@ -79,5 +83,19 @@ class Jeu1 extends Phaser.Scene {
 			player.setVelocityY(0);
 		}
  }
- 
+
+}
+
+		//fonctions //
+
+	function hitBiere(player, biere){
+
+}
+
+	function hitRhum(player,rhum){
+
+}
+
+	function hitEau(player, eau){
+
 }

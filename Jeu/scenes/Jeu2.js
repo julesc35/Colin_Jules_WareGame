@@ -86,3 +86,21 @@ class Jeu2 extends Phaser.Scene {
 }
 
 }
+
+		//fonctions //
+
+	function hitBateauEnm(player, BateauEnm){
+
+}
+
+	function hitIle(player,ile){
+
+}
+
+	function hitIle2(player, ile2){
+
+}
+
+	function hitRochile(player, rochile){
+
+}

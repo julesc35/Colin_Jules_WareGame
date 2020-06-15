@@ -65,4 +65,31 @@ class Jeu3 extends Phaser.Scene {
 			player.setVelocityY(75);
 		}
 }
+
+}
+
+		//fonctions //
+
+	function hitBoule(player, boule){
+
+}
+
+	function hitPierre(player,pierre){
+
+}
+
+	function hitPierre2(player, pierre2){
+
+}
+
+	function hitPierre3(player, pierre3){
+
+}
+
+	function hitPierre4(player, pierre4){
+
+}
+
+	function hitPierre5(player, pierre5){
+
 }
