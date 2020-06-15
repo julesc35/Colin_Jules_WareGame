@@ -9,6 +9,8 @@ class Menu extends Phaser.Scene {
 
         create(){
 
+                cursors = this.input.createCursorsKeys();
+
                 // fond //
 
 
@@ -39,7 +41,7 @@ class Menu extends Phaser.Scene {
 
 
                 // musique //
-                
+
 
         menuMusic = this.sound.add('menuMusic');
         menuMusic.play({volume: 0.5, loop: true});

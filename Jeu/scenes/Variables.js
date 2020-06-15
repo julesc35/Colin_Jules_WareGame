@@ -116,7 +116,7 @@ class Variables extends Phaser.Scene {
 
     // Joueur // 
 
-        this.load.image('Pirate_Face', 'Assets/Personnages/Pirate_face.png');
+        this.load.spritesheet('Pirate_Face', 'Assets/Personnages/Pirate_faces.png', {frameWidth: 150, frameHeight: 600});
         this.load.spritesheet('Pirate_Droit', 'Assets/Personnages/Pirate_Course_Droit_Sprt.png', {frameWidth: 150, frameHeight: 600});
         this.load.spritesheet('Pirate_Gauche', 'Assets/Personnages/Pirate_Course_Gauche_Sprt.png', {frameWidth: 150, frameHeight: 600});
         this.load.spritesheet('Pirate_Fuite', 'Assets/Personnages/Pirate_Course_Fuite_Sprt.png', {frameWidth: 80, frameHeight: 300});

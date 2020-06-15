@@ -11,10 +11,10 @@ var config = {
     scene: [
     Variables,
     Audio,
-    Menu//,
+    //Menu,
     //ComJouer,
     //Jouer,
-    //Jeu1,
+    Jeu1
     //Jeu2,
     //Jeu3
     ]
