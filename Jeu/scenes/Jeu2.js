@@ -84,4 +84,5 @@ class Jeu2 extends Phaser.Scene {
 			player.setVelocityY(0);
 		}
 }
+
 }

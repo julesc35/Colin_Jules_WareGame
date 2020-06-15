@@ -43,6 +43,10 @@ var rochile;
 
 var boule;
 var pierre;
+var pierre2;
+var pierre3;
+var pierre4;
+var pierre5;
 
 // collectibles //
 

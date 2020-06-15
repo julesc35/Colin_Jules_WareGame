@@ -34,22 +34,35 @@ class Jeu3 extends Phaser.Scene {
         	frameRate: 5,
         	repeat: -1
         });
+
+        // création des objets //
+        pierre = this.physics.add.image();
+		pierre2 = this.physics.add.image();
+		pierre3 = this.physics.add.image();
+		pierre4 = this.physics.add.image();
+		pierre5 = this.physics.add.image();
 }
 
 	update(){
 
 		// configuration des touches //
-		if (cursors.left.isDown && cursors.right.isUp){
+		if (cursors.left.isDown && cursors.up.isUp && cursors.right.isUp){
 			player.anims.play('left', true);
 			player.setFlipX(false);
 			player.setVelocityX(-95);
 			player.setVelocityY(0);
 		}
-		else if (cursors.right.isUp && cursors.left.isUp){
+		else if (cursors.right.isUp && cursors.up.isUp && cursors.left.isUp){
 			player.anims.play('stop', true);
 			player.setFlipX(false);
 			player.setVelocityX(0);
 			player.setVelocityY(0);
+		}
+		if (cursors.up.isDown && cursors.left.isDown && cursors.right.isUp){
+			player.anims.play('left', true);
+			player.setFlipX(false);
+			player.setVelocityX(0);
+			player.setVelocityY(75);
 		}
 }
 }
