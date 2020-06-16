@@ -7,24 +7,21 @@ var cursor;
 var player;
 
 var nbrVie = 3;
-var vie1;
-var vie2;
-var vie3;
 
-var victoire;
-var defaite;
+var victoire = 0;
+var defaite = 0;
 
-var score;
-var scoreG;
+var score = 0;
+var scoreG = 0;
 
 var jeu1 = 0;
 var jeu2 = 0;
 var jeu3 = 0;
 
 var X = Phaser.Math.Between(0,1920);
-var Y = setPositionY(0);
 
-
+var timer;
+var timerdepart;
 
 // musiques //
 
@@ -68,9 +65,11 @@ var Bouton_Bonus;
 
 // text //
 
-var textJeu1;
-var textJeu2;
-var textJeu3;
+var score_text;
+
+var text_depart3;
+var text_depart2;
+var text_depart1;
 
 var textVictoire;
 var textDefaite;

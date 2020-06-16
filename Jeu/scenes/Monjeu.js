@@ -15,7 +15,7 @@ var config = {
     ComJouer,
     Jouer,
     Jeu1
-    //Jeu2,
+    Jeu2,
     //Jeu3
     ]
   }

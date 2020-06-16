@@ -11,11 +11,11 @@ class Jeu2 extends Phaser.Scene {
 
 		// fond // 
 
-        this.add.image(960, 540, 'Jeu2').setScale(0.30);
+        this.add.image(960, 540, 'Jeu2').setScale(0.30).setDepth(1);
 
         // joueur // 
 
-        player = this.add.sprite(960,540, 'Bateau_joueur').setdepth(2);
+        player = this.add.sprite(960,540, 'Bateau_joueur').setDepth(2);
         player.setCollideWorldBounds(true);
 
         // création des animations du joueur //
@@ -34,30 +34,40 @@ class Jeu2 extends Phaser.Scene {
         	repeat: -1
         });
 
+        // création de la vie //
+
+        if (nbrVie == 1){this.add.image(1860,66, 'Vie').setDepth(3)}
+        if (nbrVie == 2){this.add.image(1740,66, 'Vie').setDepth(3)}
+        if (nbrVie == 3){this.add.image(1620,66, 'Vie').setDepth(3)}
+
         // creation des enemis //
 
 
     BateauEnm = this.physics.add.group({
         key: 'BateauEnm',
         repeat: Phaser.Math.Between(1,6),
-        setXY: position.X, position.Y
+        setX: Phaser.Math.Between(0,1920);
+        setY: 0;
     });
 
     ile = this.physics.add.group({
         key: 'ile',
         repeat: Phaser.Math.Between(0,4),
-        setXY: position.X, position.Y
+        setX: Phaser.Math.Between(0,1920);
+        setY: 0;
     });
 
     ile2 = this.physics.add.group({
         key: 'ile2',
         repeat: Phaser.Math.Between(0,2),
-        setXY: position.X, position.Y
+        setX: Phaser.Math.Between(0,1920);
+        setY: 0;
     });
     rochile = this.physics.add.group({
         key: 'rochile',
         repeat: Phaser.Math.Between(1,4),
-        setXY: position.X, position.Y
+        setX: Phaser.Math.Between(0,1920);
+        setY: 0;
     });
 
 }
@@ -65,6 +75,7 @@ class Jeu2 extends Phaser.Scene {
 	update(){
 
 		// configuration des touches //
+
 		if (cursors.left.isDown && cursors.right.isUp){
 			player.anims.play('left', true);
 			player.setFlipX(false);
@@ -102,5 +113,13 @@ class Jeu2 extends Phaser.Scene {
 }
 
 	function hitRochile(player, rochile){
+
+}
+
+	function victoire(){
+
+}
+
+	function defaite(){
 
 }
