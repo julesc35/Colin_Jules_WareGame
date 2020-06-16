@@ -24,7 +24,7 @@ class Jeu2 extends Phaser.Scene {
 
 
 
-		text_depart1 = this.add.text(960, 540, 'debut dans 3 secondes !'{ fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10).setVisible(false);
+		text_depart1 = this.add.text(960, 540, 'debut dans 3 secondes !', { fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10).setVisible(false);
 
 
 		// fond // 
@@ -80,8 +80,8 @@ class Jeu2 extends Phaser.Scene {
 
         key: 'BateauEnm',
         repeat: Phaser.Math.Between(1,6),
-        setX: Phaser.Math.Between(0,1920);
-        setY: 0;
+        setX: Phaser.Math.Between(0,1920),
+        setY: 0
 
     });
 
@@ -90,8 +90,8 @@ class Jeu2 extends Phaser.Scene {
 
         key: 'ile',
         repeat: Phaser.Math.Between(0,4),
-        setX: Phaser.Math.Between(0,1920);
-        setY: 0;
+        setX: Phaser.Math.Between(0,1920),
+        setY: 0
 
     });
 
@@ -100,8 +100,8 @@ class Jeu2 extends Phaser.Scene {
 
         key: 'ile2',
         repeat: Phaser.Math.Between(0,2),
-        setX: Phaser.Math.Between(0,1920);
-        setY: 0;
+        setX: Phaser.Math.Between(0,1920),
+        setY: 0
 
     });
 
@@ -110,8 +110,8 @@ class Jeu2 extends Phaser.Scene {
 
         key: 'rochile',
         repeat: Phaser.Math.Between(1,4),
-        setX: Phaser.Math.Between(0,1920);
-        setY: 0;
+        setX: Phaser.Math.Between(0,1920),
+        setY: 0
 
     });
 
@@ -201,6 +201,30 @@ class Jeu2 extends Phaser.Scene {
 			player.setVelocityY(0);
 
 		}
+
+
+		if (victoire == 1){
+
+			this.add.text(960, 540, 'Veuillez patienter', {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
+
+			if(nbrVie == 3){score += 300;}
+			if(nbrVie == 2){score += 200;}
+			if(nbrVie == 1){score += 100;}
+
+			scoreG += score;
+
+			this.time.addEvent({delay: 5000, callback: () =>{
+
+				MusicBar.mute = true;
+				this.scene.start('Jeu3');
+
+			},
+
+		loop: false
+
+			});
+
+		}
 }
 
 }
@@ -220,7 +244,7 @@ class Jeu2 extends Phaser.Scene {
 			this.add.text(960, 540, 'Perdu !', {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
 			this.add.text(960, 440, 'votre score est de : ' + score, {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
 		}
-		
+
 }
 
 	function hitIle (player,ile){
@@ -276,31 +300,3 @@ class Jeu2 extends Phaser.Scene {
 	rochile.disableBody();
 
 }
-
-
-	function fin (){
-
-		if (victoire == 1){
-
-			this.add.text(960, 540, 'Veuillez patienter', {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
-
-			if(nbrVie == 3){score += 300;}
-			if(nbrVie == 2){score += 200;}
-			if(nbrVie == 1){score += 100;}
-
-			scoreG += score;
-
-			this.time.addEvent({delay: 5000, callback: () =>{
-
-				MusicBar.mute = true;
-				this.scene.start('Jeu3');
-
-			},
-
-		loop: false
-
-			});
-
-		};
-
-	}

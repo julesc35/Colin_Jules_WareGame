@@ -26,6 +26,8 @@ var X = Phaser.Math.Between(0,1920);
 var timer;
 var timerdepart;
 
+var hitMarker = 0;
+
 // musiques //
 
 var menuMusic;
@@ -45,8 +47,8 @@ var boule;
 var pierre;
 var pierre2;
 var pierre3;
-var pierre4;
-var pierre5;
+
+var sol_invisible;
 
 // collectibles //
 
@@ -70,8 +72,6 @@ var Bouton_Bonus;
 
 var score_text;
 
-var text_depart3;
-var text_depart2;
 var text_depart1;
 
 var textVictoire;
@@ -106,7 +106,6 @@ class Variables extends Phaser.Scene {
         this.load.image('BoutJeu1', 'Assets/Interface/Bouton_Jeu1.png');
         this.load.image('BoutJeu2', 'Assets/Interface/Bouton_Jeu2.png');
         this.load.image('BoutJeu3', 'Assets/Interface/Bouton_Jeu3.png');
-        //this.load.image('BoutBonus', 'Assets/_Bonus/Bouton_Bonus.png');
 
     // elements //
 
@@ -118,11 +117,12 @@ class Variables extends Phaser.Scene {
     // ennemis / Obstacles //
 
         this.load.image('BatEnnem', 'Assets/Personnages/bateauEnnemis.png');
-        this.load.image('Ennemi', 'Assets/Personnages/ennemi.png');
+        this.load.spritesheet('Ennemi', 'Assets/Personnages/ennemi.png', {frameWidth: 350, frameHeight: 350});
         this.load.image('Obstacle', 'Assets/Elements_Décors/Obstacle.png');
         this.load.image('Ennemile', 'Assets/Elements_Décors/Ennemile.png');
         this.load.image('Ennemile2', 'Assets/Elements_Décors/Ennemile2.png');
         this.load.image('EnnemiRoche', 'Assets/Elements_Décors/EnnemiRoche.png');
+        this.load.image('Sol_Inv', 'Assets/Encadrement/sol_invisible.png');
 
     // Joueur // 
 

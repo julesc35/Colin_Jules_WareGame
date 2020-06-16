@@ -11,9 +11,7 @@ var config = {
     scene: [
     Variables,
     Audio,
-    Jeu1,
-    Jeu2,
-    Jeu3
+    ComJouer
     ]
   }
 

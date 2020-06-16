@@ -23,7 +23,7 @@ class Jeu1 extends Phaser.Scene {
 
 
 
-		score_texte = this.add.text(180, 70, 'X 0'{ fontFamily: 'Treasuremap', fontSize: 90}).setDepth(2);
+		score_texte = this.add.text(180, 70, 'X 0', { fontFamily: 'Treasuremap', fontSize: 90}).setDepth(2);
 
 
 
@@ -31,7 +31,7 @@ class Jeu1 extends Phaser.Scene {
 
 
 
-		text_depart1 = this.add.text(960, 540, 'debut dans 3 secondes !'{ fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10).setVisible(false);
+		text_depart1 = this.add.text(960, 540, 'debut dans 3 secondes !', { fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10).setVisible(false);
 
 		// fond // 
 
@@ -80,7 +80,7 @@ class Jeu1 extends Phaser.Scene {
 
         key: 'biere',
         repeat: Phaser.Math.Between(1,5),
-        setX: Phaser.Math.Between(0,1920);
+        setX: Phaser.Math.Between(0,1920)
     });
 
 
@@ -88,7 +88,7 @@ class Jeu1 extends Phaser.Scene {
 
         key: 'rhum',
         repeat: Phaser.Math.Between(0,3),
-        setX: Phaser.Math.Between(0,1920);
+        setX: Phaser.Math.Between(0,1920)
     });
 
 
@@ -96,7 +96,7 @@ class Jeu1 extends Phaser.Scene {
 
         key: 'eau',
         repeat: Phaser.Math.Between(2,6),
-        setX: Phaser.Math.Between(0,1920);
+        setX: Phaser.Math.Between(0,1920)
     });
 
 
@@ -162,6 +162,7 @@ class Jeu1 extends Phaser.Scene {
 			player.setVelocityX(-120);
 			player.setVelocityY(0);
 		}
+		
 		else if (cursors.right.isDown && cursors.left.isUp){
 
 			player.anims.play('left', true);
@@ -169,6 +170,7 @@ class Jeu1 extends Phaser.Scene {
 			player.setVelocityX(120);
 			player.setVelocityY(0);
 		}
+
 		else if (cursors.right.isUp && cursors.left.isUp){
 
 			player.anims.play('stop', true);
@@ -176,7 +178,24 @@ class Jeu1 extends Phaser.Scene {
 			player.setVelocityX(0);
 			player.setVelocityY(0);
 		}
- }
+
+		if (victoire == 1){
+
+			this.add.text(960, 540, 'Veuillez patienter', {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
+
+			scoreG += score;
+
+			this.time.addEvent({delay: 5000, callback: () =>{
+
+				MusicBar.mute = true;
+				this.scene.start('Jeu2');
+			},
+
+		loop: false
+
+			});
+		}
+}
 
 }
 
@@ -198,7 +217,7 @@ class Jeu1 extends Phaser.Scene {
 			});
 		}
 
-}
+	}
 
 
 	function hitRhum(player,rhum){
@@ -213,7 +232,7 @@ class Jeu1 extends Phaser.Scene {
 			child.enableBody(true, child.X, 0, true, true);
 
 			});
-}
+	}
 
 
 	function hitEau(player, eau){
@@ -228,7 +247,7 @@ class Jeu1 extends Phaser.Scene {
 			child.enableBody(true, child.X, 0, true, true);
 
 			});
-}
+	}
 
 
 	function ExitWorld(biere, eau, rhum){
@@ -237,27 +256,4 @@ class Jeu1 extends Phaser.Scene {
 	eau.disableBody();	
 	rhum.disableBody();
 
-}
-
-
-	function fin(){
-
-		if (victoire == 1){
-
-			this.add.text(960, 540, 'Veuillez patienter', {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
-
-			scoreG += score;
-
-			this.time.addEvent({delay: 5000, callback: () =>{
-
-				MusicBar.mute = true;
-				this.scene.start('Jeu2');
-			},
-
-		loop: false
-
-			});
-
-		};
-		
 	}
