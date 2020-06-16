@@ -10,6 +10,8 @@ class Jeu3 extends Phaser.Scene {
 
 	create(){
 
+		victoire = 0;
+
 		// fond // 
 
         this.add.image(960, 540, 'Jeu3').setScale(0.30);
@@ -41,7 +43,47 @@ class Jeu3 extends Phaser.Scene {
 		pierre3 = this.physics.add.image();
 		pierre4 = this.physics.add.image();
 		pierre5 = this.physics.add.image();
+
+
+    // collisions //
+
+
+
+    this.physics.overlap(player, BateauEnm, hitBateauEnm, null, this);
+
+    this.physics.overlap(player, ile, hitIle, null, this);
+
+    this.physics.overlap(player, ile2, hitIle2, null, this);
+
+    this.physics.overlap(player, rochile, hitRochile, null, this);
+
+
+    /////// chrono /////// 
+
+
+
+    // debut de partie //
+    this.physics.pause();
+    timerdepart = this.time.addEvent({delay: 3000, callback: () =>{
+    	text_depart1.setVisible(false);
+    	this.physics.resume();
+    }, 
+    loop: false
+});
+
+    // chrono toute la partie // 
+
+    timer = this.time.addEvent({delay: 13000, callback: () =>{
+    	victoire += 1;
+    	this.physics.pause();
+    	this.add.text(960, 540, 'Fin de la partie', {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
+    },
+    loop: false
+});
+
+
 }
+
 
 	update(){
 

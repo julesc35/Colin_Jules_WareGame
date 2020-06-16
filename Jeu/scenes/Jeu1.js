@@ -111,9 +111,10 @@ class Jeu1 extends Phaser.Scene {
 
 
     // debut de partie //
-
+    this.physics.pause();
     timerdepart = this.time.addEvent({delay: 3000, callback: () =>{
     	text_depart1.setVisible(false);
+    	this.physics.resume();
     }, 
     loop: false
 });
@@ -209,6 +210,7 @@ class Jeu1 extends Phaser.Scene {
 
 	function fin(){
 		if (victoire == 1){
+			this.add.text(960, 540, 'Veuillez patienter', {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
 			scoreG += score;
 			this.time.addEvent({delay: 5000, callback: () =>{
 				MusicBar.mute = true;
@@ -218,5 +220,4 @@ class Jeu1 extends Phaser.Scene {
 			});
 
 		};
-
 	}

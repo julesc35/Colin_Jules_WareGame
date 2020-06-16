@@ -7,6 +7,9 @@ var cursor;
 var player;
 
 var nbrVie = 3;
+var vie1;
+var vie2;
+var vie3;
 
 var victoire = 0;
 var defaite = 0;
@@ -33,7 +36,7 @@ var MusicOutro;
 
 // obstacles //
 
-var BateauEnm;
+var bateauEnm;
 var ile;
 var ile2;
 var rochile;
