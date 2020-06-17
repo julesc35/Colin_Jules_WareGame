@@ -225,8 +225,6 @@ class Jeu3 extends Phaser.Scene {
 
 		}
 
-
-
 		if (player.x<30){victoire += 1;}
 
 }

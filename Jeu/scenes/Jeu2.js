@@ -139,6 +139,7 @@ class Jeu2 extends Phaser.Scene {
     // debut de partie //
 
     this.physics.pause();
+    
     timerdepart = this.time.addEvent({delay: 3000, callback: () =>{
 
     	text_depart1.setVisible(false);

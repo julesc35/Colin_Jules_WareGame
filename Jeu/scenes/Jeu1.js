@@ -60,6 +60,7 @@ class Jeu1 extends Phaser.Scene {
         	frames: this.anims.generateFrameNumbers('Pirate_Gauche', {start: 0, end: 29}),
         	frameRate: 5,
         	repeat: -1
+
         });
 
         this.anims.create({
@@ -68,6 +69,7 @@ class Jeu1 extends Phaser.Scene {
         	frames: this.anims.generateFrameNumbers('Pirate_Face', {start: 0, end: 1}),
         	frameRate: 5,
         	repeat: -1
+
         });
 
 
@@ -81,6 +83,7 @@ class Jeu1 extends Phaser.Scene {
         key: 'biere',
         repeat: Phaser.Math.Between(1,5),
         setX: Phaser.Math.Between(0,1920)
+
     });
 
 
@@ -89,6 +92,7 @@ class Jeu1 extends Phaser.Scene {
         key: 'rhum',
         repeat: Phaser.Math.Between(0,3),
         setX: Phaser.Math.Between(0,1920)
+
     });
 
 
@@ -97,6 +101,7 @@ class Jeu1 extends Phaser.Scene {
         key: 'eau',
         repeat: Phaser.Math.Between(2,6),
         setX: Phaser.Math.Between(0,1920)
+
     });
 
 
@@ -121,6 +126,7 @@ class Jeu1 extends Phaser.Scene {
 
 
     this.physics.pause();
+
     timerdepart = this.time.addEvent({delay: 3000, callback: () =>{
 
     	text_depart1.setVisible(false);
@@ -138,6 +144,7 @@ class Jeu1 extends Phaser.Scene {
     	victoire += 1;
     	this.physics.pause();
     	this.add.text(960, 540, 'Fin de la partie', {fontFamily: 'Treasuremap', fontSize: 130, color: '#000000'}).setDepth(10);
+
     },
 
     loop: false
@@ -161,6 +168,7 @@ class Jeu1 extends Phaser.Scene {
 			player.setFlipX(false);
 			player.setVelocityX(-120);
 			player.setVelocityY(0);
+
 		}
 		
 		else if (cursors.right.isDown && cursors.left.isUp){
@@ -169,6 +177,7 @@ class Jeu1 extends Phaser.Scene {
 			player.setFlipX(true);
 			player.setVelocityX(120);
 			player.setVelocityY(0);
+
 		}
 
 		else if (cursors.right.isUp && cursors.left.isUp){
@@ -177,6 +186,7 @@ class Jeu1 extends Phaser.Scene {
 			player.setFlipX(false);
 			player.setVelocityX(0);
 			player.setVelocityY(0);
+
 		}
 
 		if (victoire == 1){
@@ -208,6 +218,7 @@ class Jeu1 extends Phaser.Scene {
 		biere.disableBody(true, true);
 		score += 25;
 		score_texte.setText('X ' + score);
+
 		if (biere.countActive(true) <= 1){
 
 			biere.children.iterate(function(child){
@@ -225,6 +236,7 @@ class Jeu1 extends Phaser.Scene {
 		rhum.disableBody(true, true);
 		score += 50;
 		score_texte.setText('X ' + score);
+
 		if (rhum.countActive(true) <= 1){
 
 			rhum.children.iterate(function(child){
@@ -240,6 +252,7 @@ class Jeu1 extends Phaser.Scene {
 		eau.disableBody(true, true);
 		score -= 40;
 		score_texte.setText('X ' + score);
+		
 		if (eau.countActive(true) <= 1){
 
 			eau.children.iterate(function(child){
