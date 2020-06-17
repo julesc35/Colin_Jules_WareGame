@@ -20,8 +20,10 @@ class Menu extends Phaser.Scene {
                 // Logo // 
 
 
-       var Logo = this.add.image(1000, 280, 'Logo').setScale(0.3).setDepth(100);          
+       var Logo = this.add.image(1000, 280, 'Logo').setScale(0.3).setDepth(100);  
+
         Logo.setInteractive({useHandCursor: true});
+
         Logo.on('pointerdown', () => this.clickLogo());
 
 
@@ -30,13 +32,17 @@ class Menu extends Phaser.Scene {
 
 
         Bouton_Jouer = this.add.image(1000, 600, 'BoutJouer').setScale(0.75);
+
         Bouton_Jouer.setInteractive({useHandCursor: true});
+
         Bouton_Jouer.on('pointerdown', () => this.clickJouer());
 
 
 
         Bouton_ComJouer = this.add.image(1000, 775, 'BoutComJouer').setScale(0.75);
+
         Bouton_ComJouer.setInteractive({useHandCursor: true});
+
         Bouton_ComJouer.on('pointerdown', () => this.clickComJouer());
 
 
@@ -45,6 +51,7 @@ class Menu extends Phaser.Scene {
 
         menuMusic = this.sound.add('menuMusic');
         menuMusic.play({volume: 0.5, loop: true});
+
         }
         
 
@@ -62,9 +69,13 @@ class Menu extends Phaser.Scene {
 */
 
         function clickJouer(){
+
                 this.scene.switch('MenuJeu');
+
         }
 
         function clickComJouer(){
+
                 this.scene.switch('ComJouer');
+                
         }

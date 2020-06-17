@@ -14,10 +14,12 @@ class Audio extends Phaser.Scene {
         this.load.audio('BarMusic', 'Assets/_Musiques/JeuBar.wav');
         this.load.audio('merMusic', 'Assets/_Musiques/JeuEnMer.wav');
         this.load.audio('FuiteMusic', 'Assets/_Musiques/JeuFuite.wav');
+
 }
  create(){}
 
  update(){
+        
  	this.scene.start('Menu');
  }
 }
